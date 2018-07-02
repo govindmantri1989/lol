@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="onetomany.Customer" table="customer3">
+        <id name="cid"/>
+        <property name="name"/>
+        <set name="v" cascade="all" table="common">
+            <key column="cid">
+            </key>
+            <many-to-many class="onetomany.Vendor" column="fid"></many-to-many> 
+        </set>
+    </class>
+  
+
+</hibernate-mapping>
