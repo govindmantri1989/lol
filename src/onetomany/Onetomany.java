@@ -35,6 +35,7 @@ public class Onetomany {
         Set veSet=new HashSet();
         veSet.add(v);
         veSet.add(v1);
+        System.out.println("dfkbkdsjf");
         c1.setV(veSet);
         c2.setV(veSet);
         sess.save(v);
